@@ -1,0 +1,6 @@
+  {
+    "name": "No Popups",
+    "version": "1.0",
+    "description": "Block any popups from popping up",
+    "manifest_version": 2
+  }
