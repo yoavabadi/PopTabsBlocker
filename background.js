@@ -1,2 +1,7 @@
-var a;
+chrome.runtime.onInstalled.addListener(function() {
+
+
+
+
+});
 
