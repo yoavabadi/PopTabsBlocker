@@ -3,11 +3,21 @@
     "version": "1.0",
     "description": "Block any popups from popping up",
     "manifest_version": 2,
-    "permissions": ["activeTab", "declarativeContent", "storage"],
+    "permissions": ["activeTab", "tabs", "declarativeContent", "storage"],
     "background": {
       "scripts": ["background.js"],
       "persistent": false
     },
+    "content_scripts": [{
+        "matches": [
+            "http://*/*",
+            "https://*/*",
+            "*://*/*"
+        ],
+      "run_at": "document_start",
+      "all_frames": true,
+        "js": ["content_script.js", "content_script_get_url.js"]
+    }],
     "browser_action": {
       "default_popup": "popup.html"
 
