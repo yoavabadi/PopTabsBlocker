@@ -36,7 +36,7 @@ chrome.tabs.onCreated.addListener(function(tab) {
         chrome.tabs.query({active: true, currentWindow: true}, function (tabs) {
             let tabUrlBase = getHostName(tabs[0].url).toString();
             chrome.storage.sync.get("NO_POP", function(result) {
-                if(result["WATCH_LIST"].includes(parentUrlBase)){
+                if(result["NO_POP"].includes(parentUrlBase)){
                     if((tabUrlBase !== parentUrlBase) || (getHostName(tabUrl).toString() !== parentUrlBase) ||
                         tabUrl.toString().endsWith("png")){
                          chrome.tabs.remove(tab.id, function() { });
