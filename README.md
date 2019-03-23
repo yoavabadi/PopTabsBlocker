@@ -23,5 +23,5 @@ Examples of contributions include:
 Those contributions should be performed by [submitting a pull request](https://github.com/yoavabadi/PopTabsBlocker/pulls).
 
 ## Licensing
-Licensed under the Apache License, Version 2.0 (the "License").
+Licensed under the MIT License (the "License").
 A copy of the license is available in the repository's [License.txt](/LICENSE) file.
