@@ -1,5 +1,7 @@
 let addSite = document.getElementById("addSite");
 let removeSite = document.getElementById("removeSite");
+let siteAdded = document.getElementById("siteAdded");
+let siteRemoved = document.getElementById("siteRemoved");
 
 /**
  * Simple get hostname implementation, with regex (from stackOverflow)
@@ -33,7 +35,7 @@ addSite.onclick = function(element) {
             //     Save it using the Chrome extension storage API.
             chrome.storage.sync.set(obj, function() {
                 // Notify that we saved.
-                chrome.extension.getBackgroundPage().alert('host saved: ' + _host);
+                siteAdded.style.display = "inline";
             });
         });
     });
@@ -60,7 +62,7 @@ removeSite.onclick = function(element) {
             // Save it using the Chrome extension storage API.
             chrome.storage.sync.set(obj, function() {
                 // Notify that we saved.
-                chrome.extension.getBackgroundPage().alert('host removed: ' + _host);
+                siteRemoved.style.display = "inline";
             });
         });
     });
